@@ -213,3 +213,136 @@ button:hover {
   color: #f2e4ff;
   font-size: 1rem;
 }
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/*sidebar code*/
+
+.layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 230px;
+  padding: 24px 20px;
+  background: linear-gradient(180deg, #160326 0%, #2c0c51 60%, #14021f 100%);
+  box-shadow: 6px 0 20px rgba(0, 0, 0, 0.75);
+  border-right: 1px solid rgba(255, 236, 149, 0.18);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  z-index: 20;
+}
+
+.sidebar-logo {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #ffeb7a;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.sidebar-nav a {
+  display: block;
+  padding: 10px 14px;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #f5e9ff;
+  text-decoration: none;
+  transition: background 0.2s ease, color 0.2s ease, transform 0.15s ease,
+    box-shadow 0.2s ease;
+}
+
+.sidebar-nav a:hover {
+  background: radial-gradient(circle at top left, #ffdf5b, #d3a3ff);
+  color: #1b0826;
+  box-shadow: 0 0 18px rgba(255, 223, 91, 0.8);
+  transform: translateX(2px);
+}
+
+.content {
+  flex: 1;
+  margin-left: 230px;
+  padding: 32px 32px 40px;
+}
+
+.content h1 {
+  text-align: left;
+  padding-top: 10px;
+}
+
+.section:first-of-type {
+  margin-top: 0;
+}
+
+.projects .project {
+  margin-top: 18px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(255, 236, 149, 0.18);
+}
+
+.projects .project:first-of-type {
+  margin-top: 10px;
+  padding-top: 0;
+  border-top: none;
+}
+
+.contact p {
+  margin: 6px 0 0;
+}
+
+@media (max-width: 800px) {
+  .sidebar {
+    position: static;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: 18px;
+  }
+
+  .sidebar-logo {
+    text-align: left;
+  }
+
+  .sidebar-nav {
+    flex-direction: row;
+    gap: 6px;
+  }
+
+  .sidebar-nav a {
+    font-size: 0.75rem;
+    padding: 8px 10px;
+  }
+
+  .content {
+    margin-left: 0;
+    padding: 18px 16px 28px;
+  }
+
+  .section {
+    margin-inline: 0;
+  }
+
+  h1 {
+    text-align: center;
+  }
+}
