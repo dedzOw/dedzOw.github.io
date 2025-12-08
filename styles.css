@@ -1,5 +1,11 @@
 /*created with the help of chatGPT*/
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -50,6 +56,18 @@ h3:hover {
   text-shadow: 0 0 12px rgba(255, 235, 122, 0.85);
 }
 
+a {
+  color: #ffdf5b;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.2s;
+}
+
+a:hover {
+  color: #ffffff;
+  text-shadow: 0 0 10px rgba(255, 223, 91, 0.85);
+}
+
 .section {
   background: radial-gradient(circle at top left, rgba(119, 46, 255, 0.35), rgba(35, 12, 70, 0.95));
   margin: 25px auto;
@@ -80,16 +98,9 @@ h3:hover {
   transition: 0.25s ease;
 }
 
-a {
-  color: #ffdf5b;
-  text-decoration: none;
-  font-weight: 500;
-  transition: 0.2s;
-}
-
-a:hover {
-  color: #ffffff;
-  text-shadow: 0 0 10px rgba(255, 223, 91, 0.85);
+.section p {
+  color: #f2e4ff;
+  font-size: 1rem;
 }
 
 .subheader {
@@ -97,6 +108,18 @@ a:hover {
   font-size: 1.4rem;
   color: #ffe86a;
   animation: fadeRise 0.7s ease forwards;
+}
+
+.projects .project {
+  margin-top: 18px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(255, 236, 149, 0.18);
+}
+
+.projects .project:first-of-type {
+  margin-top: 10px;
+  padding-top: 0;
+  border-top: none;
 }
 
 .project img {
@@ -202,6 +225,7 @@ button:hover {
   pointer-events: none;
   animation: fogMove 22s linear infinite;
   mix-blend-mode: screen;
+  z-index: 1;
 }
 
 @keyframes fogMove {
@@ -209,22 +233,11 @@ button:hover {
   100% { transform: translate(-220px, -220px); }
 }
 
-.section p {
-  color: #f2e4ff;
-  font-size: 1rem;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-/*sidebar code*/
-
 .layout {
   display: flex;
   min-height: 100vh;
+  position: relative;
+  z-index: 2;
 }
 
 .sidebar {
@@ -232,8 +245,8 @@ button:hover {
   top: 0;
   left: 0;
   bottom: 0;
-  width: 300px;                     /* wider sidebar */
-  padding: 40px 28px;               /* more padding */
+  width: 300px;
+  padding: 40px 28px;
   background: linear-gradient(180deg, #160326 0%, #2c0c51 60%, #14021f 100%);
   box-shadow: 6px 0 20px rgba(0, 0, 0, 0.75);
   border-right: 1px solid rgba(255, 236, 149, 0.18);
@@ -244,7 +257,7 @@ button:hover {
 }
 
 .sidebar-logo {
-  font-size: 1.4rem;                /* larger name */
+  font-size: 1.4rem;
   font-weight: 700;
   color: #ffeb7a;
   letter-spacing: 0.22em;
@@ -254,16 +267,16 @@ button:hover {
 
 .sidebar-nav {
   display: flex;
-  flex-direction: column;           /* each on its own line */
-  gap: 18px;                        /* more space between items */
+  flex-direction: column;
+  gap: 18px;
 }
 
 .sidebar-nav a {
   display: block;
-  padding: 12px 0;                  /* vertical-only padding */
+  padding: 12px 0;
   border-radius: 0;
-  font-size: 1.2rem;                /* larger text */
-  text-transform: none;             /* About Me, Projects, Contacts */
+  font-size: 1.2rem;
+  text-transform: none;
   letter-spacing: 0.04em;
   color: #f5e9ff;
   text-decoration: none;
@@ -278,56 +291,15 @@ button:hover {
 
 .content {
   flex: 1;
-  margin-left: 300px;              /* match new sidebar width */
+  margin-left: 300px;
   padding: 40px 40px 48px;
+  position: relative;
+  z-index: 3;
 }
 
-/* mobile tweak */
-
-@media (max-width: 800px) {
-  .sidebar {
-    position: static;
-    width: 100%;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    padding: 16px 18px;
-  }
-
-  .sidebar-nav {
-    flex-direction: row;
-    gap: 12px;
-  }
-
-  .sidebar-nav a {
-    font-size: 0.95rem;
-    padding: 8px 10px;
-  }
-
-  .content {
-    margin-left: 0;
-    padding: 18px 16px 28px;
-  }
-}
 .content h1 {
   text-align: left;
-  padding-top: 10px;
-}
-
-.section:first-of-type {
-  margin-top: 0;
-}
-
-.projects .project {
-  margin-top: 18px;
-  padding-top: 12px;
-  border-top: 1px solid rgba(255, 236, 149, 0.18);
-}
-
-.projects .project:first-of-type {
-  margin-top: 10px;
   padding-top: 0;
-  border-top: none;
 }
 
 .contact p {
@@ -341,7 +313,8 @@ button:hover {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding-inline: 18px;
+    padding: 16px 18px;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.75);
   }
 
   .sidebar-logo {
@@ -350,11 +323,11 @@ button:hover {
 
   .sidebar-nav {
     flex-direction: row;
-    gap: 6px;
+    gap: 12px;
   }
 
   .sidebar-nav a {
-    font-size: 0.75rem;
+    font-size: 0.95rem;
     padding: 8px 10px;
   }
 
