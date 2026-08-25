@@ -1,0 +1,35 @@
+/* Structural */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background:url(images/jungle-bg.jpg);
+    background-size: cover;  /* Stretches image */
+}
+
+#content {
+    background-color: rgba(250, 128, 114, 0.8); 
+    width:70%;
+    padding: 15%;
+    margin:auto;        /* Center the content */
+    border-radius: 90%;
+    border: 5px solid lightsalmon;
+    filter:drop-shadow(0px 40px 10px green);
+}
+
+header, main, footer {
+    padding: 5px;
+}
+
+header, footer {
+    background: darkcyan;
+    border-radius: 100px;
+    color:pink
+}
+
+/* Navigation */
+
+
+/* Typography */
+h1 {
+    color:lightblue;
+}
+
