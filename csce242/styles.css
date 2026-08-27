@@ -29,6 +29,16 @@ body{
     color: white;
 }
 
+#main-header a {
+    color: #c23273;
+    text-decoration: none;
+    text-shadow: 0 0 5px maroon, 0 0 10px maroon, 0 0 20px maroon,  0 0 40px maroon;
+}
+
+#main-header a:hover {
+    color: #9069b9;
+}
+
 #main-content {
     padding: 15px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
