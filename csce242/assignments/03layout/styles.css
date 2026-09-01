@@ -1,1 +1,175 @@
 /* Structure */
+body {
+    margin: 0;
+    background-color: rgb(161, 58, 58) ;
+    font-family: "Times New Roman", Times, serif;
+}
+
+#content {
+    width: 80%;
+    max-width: 1200px;
+    margin: 5px auto;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* Header */
+#main-header {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 25px;
+}
+
+#main-header h1 {
+    margin: 10px;
+    font-size: 3rem;
+}
+
+/* Navigation */
+#main-nav ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+#main-nav li {
+    background-color: #4a0507;
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid white;
+}
+
+#main-nav a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Sidebar */
+#sidebar {
+    background-color: #4a0507;
+    padding: 15px 5px;
+    text-align: center;
+}
+
+#sidebar h2 {
+    color: #4a0507;
+}
+
+#sidebar ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+#sidebar li {
+    background-color: white;
+    padding: 7px;
+    border-bottom: 1px solid #e8b4b5;
+}
+
+#sidebar a {
+    color: #d98184;
+    text-decoration: none;
+}
+
+/* Article Cards */
+.title-card {
+    background-color: #4a0507;
+    margin-top: 10px;
+}
+
+.title-card h2 {
+    background-color: #4a0507;
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 10px;
+    font-size: 1.1rem;
+}
+
+.title-card img {
+    display: block;
+    width: 100%;
+}
+
+/* Ideas */
+.idea {
+    background-color: #4a0507;
+    color: white;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+.idea img {
+    display: block;
+    margin: auto;
+}
+
+.idea article {
+    padding: 10px 0;
+}
+
+.idea h2 {
+    margin-top: 0;
+}
+
+/* Footer */
+#main-footer {
+    background-color: #4a0507;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 10px;
+}
+
+/* 900px or larger */
+@media (min-width: 900px) {
+    #main-nav ul {
+        display: flex;
+    }
+
+    #main-nav li {
+        flex: 1;
+        border-bottom: 0;
+        border-right: 1px solid #a8c2bd;
+    }
+
+    #top-content {
+        display: flex;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    #sidebar {
+        width: 20%;
+    }
+
+    #articles {
+        display: flex;
+        flex: 1;
+        gap: 10px;
+    }
+
+    .title-card {
+        flex: 1;
+        margin-top: 0;
+    }
+
+    .idea {
+        display: flex;
+        align-items: stretch;
+        padding: 0;
+    }
+
+    .idea img {
+        width: 20%;
+        object-fit: cover;
+    }
+
+    .idea article {
+        flex: 1;
+        padding: 15px 22px;
+    }
+}
