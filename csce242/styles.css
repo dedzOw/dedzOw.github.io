@@ -131,6 +131,7 @@ body {
     }
 }
 
+/* 700px or smaller */
 @media (max-width: 699px) {
     .card-container {
     display: flex;
@@ -138,3 +139,18 @@ body {
     align-items: center;
     }
 }  
+
+/* 500px or smaller */
+@media (max-width: 499px) {
+    body {
+        background-color: white;
+    }
+
+    #content {
+        width: 100%;
+        max-width: none;
+        margin: 0;
+        padding: 0;
+        border-radius: 0;
+    }
+}
