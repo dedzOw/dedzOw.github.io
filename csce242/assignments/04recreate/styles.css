@@ -1,0 +1,49 @@
+/* Header */
+
+
+/* Sidebar */
+
+
+
+
+
+/*Footer Links*/
+#footer-links {
+    background:maroon;
+    color:white;
+}
+
+#footer-links a {
+    color:white;
+}
+
+#footer-links .columns section {
+    padding: 10px;
+}
+
+#footer-links section ul {
+    column-width: 200px;
+    column-gap: 10px;
+    padding-left: 0;
+    list-style-type: none;
+}
+
+#footer-links a {
+    text-decoration: none;
+}
+
+/* Footer Copy*/
+#footer-copy {
+    background:black;
+    color:white;
+}
+
+#footer-copy a {
+    color:white;
+}
+
+
+/* Columns for all devices */
+.column-mobile {
+    display:flex;
+}
