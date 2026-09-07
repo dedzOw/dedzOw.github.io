@@ -17,7 +17,7 @@ root {
 
 /* Small links at the top */
 .top-bar {
-    background: #242424;
+    background: black;
     height: 31px;
 }
 
@@ -25,11 +25,12 @@ root {
     display: flex;
     align-items: center;
     height: 100%;
+    padding-left: 30px;
 }
 
 .top-links a {
     padding: 0 11px;
-    border-right: 1px solid #bcbcbc;
+    border-right: 1px solid white;
     color: white;
     font-family: Arial, sans-serif;
     font-size: 11px;
@@ -44,6 +45,34 @@ root {
 
 .top-links a:last-child {
     border-right: 0;
+}
+
+
+.usc-logo {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    padding: 22px 30px;
+    background-color: black;
+}
+
+.usc-logo img {
+    width: 235px;
+    height: auto;
+}
+
+
+.school-name {
+    color: white;
+    text-decoration: none;
+    font-family: Georgia, "Times New Roman", serif;
+    margin-left: auto; /* pushes the text to the right */
+}
+
+.school-name h1 {
+    margin: 0;
+    font-size: 28px;
+    font-weight: normal;
 }
 
 /* Sidebar */
@@ -86,7 +115,21 @@ root {
 #footer-copy a {
     color:white;
 }
+#footer-social {
+    list-style-type: none;
+    width:fit-content;
+    margin:auto;
+}
 
+#footer-social li {
+    display:inline-block;
+    padding:10px;
+    font-size:24px;
+}
+
+#footer-social a {
+    list-style-type: none; 
+}
 
 /* Columns for all devices */
 .column-mobile {
