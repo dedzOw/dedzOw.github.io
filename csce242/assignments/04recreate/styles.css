@@ -1,5 +1,50 @@
-/* Header */
+root {
+    --main-color: #73000a;
+    --text-color: white;
+    --footer: #393D3B;
+}
 
+/* Header */
+.usc-header {
+    color: white;
+}
+
+.top-linksp {
+    width: min(1230px, calc(100% - 60px));
+    margin: auto;
+    color:black;
+}
+
+/* Small links at the top */
+.top-bar {
+    background: #242424;
+    height: 31px;
+}
+
+.top-links {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.top-links a {
+    padding: 0 11px;
+    border-right: 1px solid #bcbcbc;
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.top-links a:first-child {
+    padding-left: 0;
+}
+
+.top-links a:last-child {
+    border-right: 0;
+}
 
 /* Sidebar */
 
@@ -9,7 +54,7 @@
 
 /*Footer Links*/
 #footer-links {
-    background:maroon;
+    background:#73000a;
     color:white;
 }
 
