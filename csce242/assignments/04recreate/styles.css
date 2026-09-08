@@ -4,6 +4,15 @@ root {
     --footer: #393D3B;
 }
 
+* {
+    box-sizing: border-box;
+}
+
+html,body {
+    margin: 0;
+    padding: 0;
+}
+
 /* Header */
 .usc-header {
     color: white;
