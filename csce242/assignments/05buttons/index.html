@@ -1,42 +1,50 @@
 <!DOCTYPE html>
-<html> 
+<html>
     <head>
         <title>Introduction to JavaScript</title>
         <link rel="stylesheet" href="styles.css">
     </head>
+
     <body>
         <main class="assignment-containers">
             <h1>Assignment 7</h1>
             <h2>Introduction to JavaScript</h2>
 
-            <article class="speech-bubble">
-                <h3>Speech</h3>
-            </article>
+            <section class="assignment-container">
+                <article class="speech-bubble" id="speech-card">
+                    <h3>Speech</h3>
+                    <p id="speech-message"></p>
+                </article>
 
-            <article class="beverage">
-                <h3>Beverage</h3>
-                <label for="beverage-select">Pick your morning beverage:</label>
+                <article class="beverage">
+                    <h3>Beverage</h3>
 
-                <select id="beverage-select">
-                    <option value="Coffee">Coffee</option>
-                    <option value="Coke">Coke</option>
-                    <option value="Dr. Pepper">Dr. Pepper</option>
-                    <option value="Water">Water</option>
-                </select>  
-            </article>
+                    <label for="beverage-select">Pick your morning beverage:</label>
 
-            <article class="sticker-adder">
-                <h3>Add a Sticker</h3>
+                    <select id="beverage-select">
+                        <option value="Coffee">Coffee</option>
+                        <option value="Coke">Coke</option>
+                        <option value="Dr. Pepper">Dr. Pepper</option>
+                        <option value="Water">Water</option>
+                    </select>
 
-                <div id="sticker-img">
-                    <img id="sun-img" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/ea460548-110a-484c-a9ae-528d61189198/dfulr0h-0f636623-d388-4727-a121-868adcc4bfe6.png/v1/fill/w_1044,h_765/baby_sun_png_by_collegeman1998_dfulr0h-pre.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9OTM4IiwicGF0aCI6Ii9mL2VhNDYwNTQ4LTExMGEtNDg0Yy1hOWFlLTUyOGQ2MTE4OTE5OC9kZnVscjBoLTBmNjM2NjIzLWQzODgtNDcyNy1hMTIxLTg2OGFkY2M0YmZlNi5wbmciLCJ3aWR0aCI6Ijw9MTI4MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.CXFNXbqc1xPjOhmAo0t9F_5db260-_HbInNpvOH9m1E" alt="sun baby">
-                </div>
-            </article>
+                    <p id="beverage-message"></p>
+                </article>
+
+                <article class="sticker-adder">
+                    <h3>Add a Sticker</h3>
+
+                    <div id="sticker-img">
+                        <img id="sun-img" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/ea460548-110a-484c-a9ae-528d61189198/dfulr0h-0f636623-d388-4727-a121-868adcc4bfe6.png/v1/fill/w_1044,h_765/baby_sun_png_by_collegeman1998_dfulr0h-pre.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9OTM4IiwicGF0aCI6Ii9mL2VhNDYwNTQ4LTExMGEtNDg0Yy1hOWFlLTUyOGQ2MTE4OTE5OC9kZnVscjBoLTBmNjM2NjIzLWQzODgtNDcyNy1hMTIxLTg2OGFkY2M0YmZlNi5wbmciLCJ3aWR0aCI6Ijw9MTI4MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.CXFNXbqc1xPjOhmAo0t9F_5db260-_HbInNpvOH9m1E"alt="Baby sun">
+                    </div>
+                </article>
+            </section>
         </main>
+
+        <footer id="main-footer">
+            <p>&copy; jonnyshank</p>
+        </footer>
 
         <script src="main.js"></script>
     </body>
-    <footer id="main-footer">
-        <p>&copy; jonnyshank</p>
-    </footer>
 </html>
