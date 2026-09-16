@@ -170,6 +170,11 @@ h1, h2, h3 {
     100%{bottom:75%; background:blue;}
 }
 
+/* Hiding */
+.hidden {
+    
+}
+
 /* Responsive Design */
 
 /* 600 px or larger */

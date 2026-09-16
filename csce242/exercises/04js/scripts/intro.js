@@ -14,3 +14,39 @@ document.getElementById("link").onclick = (e) => {
 document.getElementById("btn-bounce").onclick = (e) => {
     document.getElementById("ball").classList.toggle("bouncing-ball");
 };
+
+//when you change the number of days since you watered your plant
+//show a message and change the image
+document.getElementById("txt-num-days").onkeyup = (e) => {
+    const numDays = parseInt(e.target.value);
+    const pMessage = document.getElementById("p-plant-msg");
+    const plantImage = document.getElementById("img-plant");
+    plantImage.classList.remove("hidden");
+
+
+    if(numDays <= 2) {
+        pMessage.innerHTML = `Let your planet rest it's only been ${numDays} day(s).`;
+        plantImage = "https://dummyimage.com/150x150/556b2f/fff&text=Happy+Plant";
+    } else if (numDays <= 5) {
+        pMessage.innerHTML = `Time to water it's been ${numDays} days.`;
+    } else if (numDays <= 7) {
+        pMessage.innerHTML = `Oh no your plant is wilting it's been ${numDays} days.`
+    } else {
+        pMessage.innerHTML = "Your plant is a gonner."
+    }
+}
+
+//counting
+let countInterval;
+let count = 0;
+const pCount = document.getElementById;("p-count");
+
+document.getElementById("btn-start").onclick = () => {
+    countInterval = setInerval(()=>{
+        pCount = innerHTML = ++count;
+    },500);
+};
+
+document.getElementById("btn-pause").onClick = () => {
+    clearInterval(countInterval);
+}
