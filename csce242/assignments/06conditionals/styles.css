@@ -1,0 +1,141 @@
+body {
+    margin: 0;
+    padding: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f2f2eb;
+    color: #315c63;
+}
+
+.assignment-container {
+    width: 90%;
+    max-width: 900px;
+    min-height: 500px;
+    margin: auto;
+    padding: 30px;
+    text-align: center;
+    background-color: #f2f2eb;
+}
+
+h1 {
+    margin: 0;
+    color: #4b8994;
+}
+
+h2 {
+    color: #ec8989;
+}
+
+h3 {
+    color: #4b8994;
+    font-size: 20px;
+}
+
+#main-nav {
+    margin: 25px 0;
+}
+
+#toggle-nav {
+    display: none;
+    width: fit-content;
+    margin: auto;
+    padding: 8px 14px;
+    background-color: #4b8994;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+
+#main-nav li {
+    display: inline;
+    list-style-type: none;
+}
+
+#main-nav li:not(:last-child)::after {
+    content: "|";
+    margin: 0 5px;
+    color: #315c63;
+}
+
+#main-nav a {
+    color: #4b8994;
+    font-size: 18px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#main-nav a:hover {
+    color: #ec8989;
+}
+
+.exercise-section {
+    min-height: 250px;
+    padding: 25px;
+    border: 2px solid #9fc1c3;
+    background-color: white;
+}
+
+.exercise-section label {
+    display: block;
+    margin: 30px 0 12px;
+    font-size: 18px;
+}
+
+.exercise-section input {
+    width: 230px;
+    padding: 8px;
+    border: 2px solid #4b8994;
+    font-size: 18px;
+}
+
+#deduction-message {
+    max-width: 650px;
+    margin: 25px auto 0;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+#counter-message {
+    margin-top: 45px;
+    font-size: 20px;
+}
+
+#semester-message {
+    font-size: 18px;
+}
+
+.hidden {
+    display: none;
+}
+
+#main-footer {
+    text-align: center;
+    color: #315c63;
+}
+
+/* When under 700px */
+@media (max-width: 700px) {
+    body {
+        padding: 0;
+    }
+
+    .assignment-container {
+        width: 100%;
+        padding: 25px 15px;
+        box-sizing: border-box;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    #toggle-nav {
+        display:flex;
+        margin-bottom: 10px;
+    }
+
+    #main-nav ul.hide-small {
+        display: none;
+    }
+
+}
