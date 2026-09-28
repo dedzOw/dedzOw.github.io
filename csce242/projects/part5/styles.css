@@ -12,7 +12,7 @@
     --light-text: #c9ced7;
     --outline-color: #91a0bc;
     --footer-text: #bfc6d2;
-    --hero-card-border: rgba(255, 255, 255, 0.35);
+    --hero-card-border: rgba(255, 255, 255, 0.65);
     --hero-card-background: rgba(14, 29, 56, 0.95);
     --blue-overlay-light: rgba(15, 26, 46, 0.711);
     --blue-overlay-dark: rgba(19, 35, 65, 0.843);
@@ -21,6 +21,10 @@
 
 * {
     box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -81,6 +85,10 @@ body {
     text-decoration: none;
 }
 
+#main-nav a.active {
+    color: var(--accent-light);
+}
+
 #main-nav .parent-button {
     padding: 9px 13px;
     border: 1px solid var(--accent-color);
@@ -99,7 +107,7 @@ body {
 }
 
 .hero::after {
-    content: "⌄";
+    content: "↓";
     position: absolute;
     bottom: 18px;
     left: 50%;
@@ -120,7 +128,8 @@ body {
     letter-spacing: 3px;
 }
 
-.hero h2 {
+.hero h2,
+.page-banner h2 {
     margin: 0;
     font-family: Georgia, "Times New Roman", serif;
     font-size: 56px;
@@ -136,15 +145,24 @@ body {
     line-height: 1.6;
 }
 
-.yellow-button {
+.yellow-button,
+.blue-button {
     display: inline-block;
     padding: 13px 25px;
-    border-radius: 25px;
-    background-color: var(--accent-color);
-    color: var(--main-color);
     font-size: 13px;
     font-weight: bold;
     text-decoration: none;
+}
+
+.yellow-button {
+    border-radius: 25px;
+    background-color: var(--accent-color);
+    color: var(--main-color);
+}
+
+.blue-button {
+    background-color: var(--main-color);
+    color: var(--white);
 }
 
 .hero-cards {
@@ -155,21 +173,22 @@ body {
     margin: 60px auto 0;
 }
 
-.hero-cards a {
+.hero-card {
     display: block;
     padding: 25px 15px;
-    border: 1px solid var(--white);
+    border: 1px solid var(--hero-card-border);
     background-color: var(--hero-card-background);
     box-shadow: 0 4px 10px var(--shadow-color);
     color: var(--white);
     text-decoration: none;
 }
-.hero-cards h3 {
+
+.hero-card h3 {
     margin: 0 0 12px;
     font-family: Georgia, "Times New Roman", serif;
 }
 
-.hero-cards p {
+.hero-card p {
     margin: 0;
     color: var(--light-text);
     font-size: 12px;
@@ -181,7 +200,11 @@ body {
     color: var(--white);
 }
 
-.units-section h2, .guide-section h2, .quick-links h2, .teacher-section h2 {
+.units-section h2,
+.guide-section h2,
+.quick-links h2,
+.teacher-section h2,
+.page-section h2 {
     margin: 0 0 30px;
     font-family: Georgia, "Times New Roman", serif;
     font-size: 30px;
@@ -202,11 +225,13 @@ body {
 }
 
 .unit-card {
+    display: block;
     min-height: 225px;
     overflow: hidden;
     border-radius: 10px;
     background-color: var(--dark-card);
     color: var(--white);
+    text-decoration: none;
 }
 
 .unit-card > p {
@@ -220,7 +245,8 @@ body {
     letter-spacing: 2px;
 }
 
-.unit-card h3,.unit-card span {
+.unit-card h3,
+.unit-card span {
     display: block;
     margin: 0 15px 15px;
 }
@@ -234,10 +260,6 @@ body {
     color: var(--light-text);
     font-size: 11px;
     line-height: 1.4;
-}
-
-.unit-card, .hero-cards a, .quick-link-cards a {
-    text-decoration: none;
 }
 
 .guide-section {
@@ -285,7 +307,8 @@ body {
     line-height: 1.5;
 }
 
-.guide-cards a, .bottom-link-cards a {
+.guide-cards a,
+.bottom-link-cards a {
     margin-top: auto;
     color: var(--red-color);
     font-size: 12px;
@@ -347,7 +370,13 @@ body {
     height: 120px;
     margin-right: 40px;
     border: 2px solid var(--accent-color);
+    border-radius: 50%;
     color: var(--white);
+    text-align: center;
+}
+
+.teacher-image p {
+    font-size: 13px;
 }
 
 .teacher-content > div:last-child {
@@ -389,6 +418,8 @@ body {
 }
 
 .bottom-link-cards article {
+    display: flex;
+    flex-direction: column;
     padding: 30px;
 }
 
@@ -404,6 +435,93 @@ body {
 .bottom-link-cards p {
     color: var(--gray-text);
     font-size: 13px;
+    line-height: 1.5;
+}
+
+.page-banner {
+    padding: 145px 0 75px;
+    text-align: center;
+    background-color: var(--main-color);
+    color: var(--white);
+}
+
+.page-banner h2 {
+    font-size: 45px;
+}
+
+.page-banner > .content-width > p:not(.small-heading) {
+    max-width: 700px;
+    margin: 20px auto 0;
+    color: var(--light-text);
+    line-height: 1.6;
+}
+
+.page-section {
+    padding: 70px 0;
+    background-color: var(--white);
+}
+
+.unit-detail {
+    padding: 35px 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.unit-detail:first-child {
+    padding-top: 0;
+}
+
+.unit-detail:last-child {
+    padding-bottom: 0;
+    border-bottom: 0;
+}
+
+.unit-detail h2 {
+    margin-bottom: 15px;
+}
+
+.unit-detail > p:not(.unit-label) {
+    max-width: 760px;
+    color: var(--gray-text);
+    line-height: 1.6;
+}
+
+.unit-label {
+    display: inline-block;
+    margin: 0 0 12px;
+    padding: 7px 10px;
+    background-color: var(--accent-color);
+    color: var(--main-color);
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.topic-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin: 28px 0;
+}
+
+.topic-list div {
+    padding: 18px;
+    border: 1px solid var(--border-color);
+}
+
+.topic-list h3,
+.topic-list p {
+    margin: 0;
+}
+
+.topic-list h3 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 17px;
+}
+
+.topic-list p {
+    margin-top: 10px;
+    color: var(--gray-text);
+    font-size: 14px;
     line-height: 1.5;
 }
 
@@ -452,7 +570,8 @@ body {
         padding-top: 100px;
     }
 
-    .hero h2 {
+    .hero h2,
+    .page-banner h2 {
         font-size: 38px;
     }
 
@@ -460,12 +579,13 @@ body {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .guide-cards {
+    .guide-cards,
+    .quick-link-cards {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .quick-link-cards {
-        grid-template-columns: repeat(2, 1fr);
+    .topic-list {
+        grid-template-columns: 1fr;
     }
 }
 
@@ -475,7 +595,8 @@ body {
         padding: 75px 0 65px;
     }
 
-    .hero h2 {
+    .hero h2,
+    .page-banner h2 {
         font-size: 30px;
     }
 
@@ -503,5 +624,9 @@ body {
     .bottom-link-cards article:not(:last-child) {
         border-right: 0;
         border-bottom: 1px solid var(--border-color);
+    }
+
+    .outline-button {
+        margin: 12px 0 0;
     }
 }
