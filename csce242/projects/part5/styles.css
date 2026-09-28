@@ -1,0 +1,467 @@
+:root {
+    --main-color: #172848;
+    --blue-overlay-light: rgba(15, 26, 46, 0.711);
+    --blue-overlay-dark: rgba(19, 35, 65, 0.843);
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--main-color);
+    background-color: #f7f4ee;
+}
+
+.content-width {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+#main-header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding: 20px 0;
+    background-color: transparent;
+    color: white;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#main-header h1 {
+    margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 25px;
+}
+
+#main-header h1 {
+    font-weight: normal;
+}
+
+#main-header h1 span {
+    font-weight: bold;
+}
+
+#main-nav ul {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+#main-nav li {
+    margin-left: 20px;
+}
+
+#main-nav a {
+    color: white;
+    font-size: 13px;
+    text-decoration: none;
+}
+
+#main-nav .parent-button {
+    padding: 9px 13px;
+    border: 1px solid #d6af21;
+    color: #d6af21;
+}
+
+.hero {
+    min-height: 680px;
+    padding: 150px 0 75px;
+    text-align: center;
+    color: white;
+    background-image:linear-gradient(var(--blue-overlay-light), var(--blue-overlay-dark)), url("https://thumb.wikimedia.org/wikipedia/commons/thumb/9/95/Washington_Crossing_the_Delaware_by_Emanuel_Leutze%2C_MMA-NYC%2C_1851.jpg/1280px-Washington_Crossing_the_Delaware_by_Emanuel_Leutze%2C_MMA-NYC%2C_1851.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail");
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-content {
+    max-width: 900px;
+}
+
+.small-heading {
+    margin: 0 0 18px;
+    color: #d6af21;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.hero h2 {
+    margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 56px;
+    letter-spacing: 2px;
+}
+
+.hero h2 span {
+    color: #f2d76a;
+}
+
+.hero-content > p:not(.small-heading) {
+    margin: 25px 0 35px;
+    line-height: 1.6;
+}
+
+.yellow-button {
+    display: inline-block;
+    padding: 13px 25px;
+    border-radius: 25px;
+    background-color: #d6af21;
+    color: var(--main-color);
+    font-size: 13px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.hero-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    max-width: 700px;
+    margin: 60px auto 0;
+}
+
+.hero-cards article {
+    padding: 25px 15px;
+    border: 1px solid var(--hero-card-border);
+    background-color: rgba(15, 32, 62, 0.849);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.hero-cards h3 {
+    margin: 0 0 12px;
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+.hero-cards p {
+    margin: 0;
+    color: #dddddd;
+    font-size: 12px;
+}
+
+.units-section {
+    padding: 70px 0;
+    background-color: var(--main-color);
+    color: white;
+}
+
+.units-section h2, .guide-section h2, .quick-links h2, .teacher-section h2 {
+    margin: 0 0 30px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 30px;
+}
+
+.section-link {
+    float: right;
+    margin-top: -55px;
+    color: #d6af21;
+    font-size: 13px;
+    text-decoration: none;
+}
+
+.unit-cards {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+}
+
+.unit-card {
+    min-height: 225px;
+    overflow: hidden;
+    border-radius: 10px;
+    background-color: #0e1d38;
+    color: white;
+}
+
+.unit-card > p {
+    margin: 0 0 20px;
+    padding: 26px 10px;
+    text-align: center;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.unit-one > p {
+    background-color: #a74300;
+}
+
+.unit-two > p {
+    background-color: #bb0620;
+}
+
+.unit-three > p {
+    background-color: #22449b;
+}
+
+.unit-four > p {
+    background-color: #006a31;
+}
+
+.unit-five > p {
+    background-color: #4c4941;
+}
+
+.unit-card h3, .unit-card span {
+    display: block;
+    margin: 0 15px 15px;
+}
+
+.unit-card h3 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 15px;
+}
+
+.unit-card span {
+    color: #b8c0cf;
+    font-size: 11px;
+    line-height: 1.4;
+}
+
+.guide-section {
+    padding: 70px 0;
+    text-align: center;
+    background-color: #f7f4ee;
+}
+
+.red-heading {
+    color: #b8493d;
+}
+
+.guide-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    text-align: left;
+}
+
+.guide-cards article {
+    min-height: 260px;
+    padding: 25px 20px;
+    border: 1px solid #ddd8cf;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.guide-cards .number {
+    color: #d6af21;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.guide-cards h3 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 17px;
+}
+
+.guide-cards article > p:not(.number) {
+    color: #6a7280;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.guide-cards a, .bottom-link-cards a {
+    color: #a53d34;
+    font-size: 12px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.quick-links {
+    padding: 40px 0;
+    background-color: #e9e4da;
+}
+
+.quick-links h2 {
+    margin-bottom: 20px;
+    font-size: 25px;
+}
+
+.quick-link-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.quick-link-cards a {
+    padding: 17px;
+    border-radius: 8px;
+    background-color: white;
+    color: var(--main-color);
+    font-size: 13px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.quick-link-cards span {
+    display: block;
+    margin-top: 4px;
+    color: #968c7e;
+    font-size: 11px;
+    font-weight: normal;
+}
+
+.teacher-section {
+    padding: 70px 0;
+    background-color: var(--main-color);
+    color: white;
+}
+
+.teacher-content {
+    display: flex;
+    align-items: center;
+    max-width: 800px;
+}
+
+.teacher-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    height: 120px;
+    margin-right: 40px;
+    border: 2px solid #d6af21;
+}
+
+.teacher-content > div:last-child {
+    max-width: 550px;
+}
+
+.teacher-content h2 {
+    margin-bottom: 15px;
+}
+
+.teacher-content p:not(.small-heading) {
+    color: #c9ced7;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.outline-button {
+    display: inline-block;
+    margin-left: 10px;
+    padding: 11px 22px;
+    border: 1px solid #91a0bc;
+    border-radius: 5px;
+    color: white;
+    font-size: 13px;
+    text-decoration: none;
+}
+
+.bottom-links {
+    padding: 70px 0;
+    background-color: #f7f4ee;
+}
+
+.bottom-link-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border: 1px solid #ddd8cf;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.bottom-link-cards article {
+    padding: 30px;
+}
+
+.bottom-link-cards article:not(:last-child) {
+    border-right: 1px solid #ddd8cf;
+}
+
+.bottom-link-cards h3 {
+    margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+.bottom-link-cards p {
+    color: #6a7280;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+#main-footer {
+    padding: 35px;
+    border-top: 3px solid #d6af21;
+    text-align: center;
+    background-color: var(--main-color);
+    color: #bfc6d2;
+}
+
+#main-footer h2 {
+    margin: 0 0 10px;
+    color: #d6af21;
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+#main-footer p {
+    margin: 5px;
+    font-size: 12px;
+}
+
+@media (max-width: 800px) {
+    .header-content {
+        display: block;
+        text-align: center;
+    }
+
+    #main-nav ul {
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 15px;
+    }
+
+    #main-nav li {
+        margin: 8px;
+    }
+
+    .hero {
+        padding-top: 100px;
+    }
+
+    .hero h2 {
+        font-size: 38px;
+    }
+
+    .unit-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .guide-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .quick-link-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+@media (max-width: 550px) {
+    .hero h2 {
+        font-size: 30px;
+    }
+
+    .hero-cards, .unit-cards, .guide-cards, .quick-link-cards, .bottom-link-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .teacher-content {
+        display: block;
+        text-align: center;
+    }
+
+    .teacher-image {
+        margin: 0 auto 25px;
+    }
+
+    .bottom-link-cards article:not(:last-child) {
+        border-right: 0;
+        border-bottom: 1px solid #ddd8cf;
+    }
+}
