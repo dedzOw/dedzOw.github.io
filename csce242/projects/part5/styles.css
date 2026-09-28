@@ -1,14 +1,33 @@
 :root {
     --main-color: #172848;
+    --dark-card: #0e1d38;
+    --background-color: #f7f4ee;
+    --soft-background: #e9e4da;
+    --white: #ffffff;
+    --accent-color: #d6af21;
+    --accent-light: #f2d76a;
+    --red-color: #a53d34;
+    --border-color: #ddd8cf;
+    --gray-text: #6a7280;
+    --light-text: #c9ced7;
+    --outline-color: #91a0bc;
+    --footer-text: #bfc6d2;
+    --hero-card-border: rgba(255, 255, 255, 0.35);
+    --hero-card-background: rgba(14, 29, 56, 0.95);
     --blue-overlay-light: rgba(15, 26, 46, 0.711);
     --blue-overlay-dark: rgba(19, 35, 65, 0.843);
+    --shadow-color: rgba(0, 0, 0, 0.2);
+}
+
+* {
+    box-sizing: border-box;
 }
 
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
     color: var(--main-color);
-    background-color: #f7f4ee;
+    background-color: var(--background-color);
 }
 
 .content-width {
@@ -20,10 +39,11 @@ body {
 #main-header {
     position: absolute;
     top: 0;
+    z-index: 1;
     width: 100%;
     padding: 20px 0;
     background-color: transparent;
-    color: white;
+    color: var(--white);
 }
 
 .header-content {
@@ -36,9 +56,6 @@ body {
     margin: 0;
     font-family: Georgia, "Times New Roman", serif;
     font-size: 25px;
-}
-
-#main-header h1 {
     font-weight: normal;
 }
 
@@ -59,25 +76,36 @@ body {
 }
 
 #main-nav a {
-    color: white;
+    color: var(--white);
     font-size: 13px;
     text-decoration: none;
 }
 
 #main-nav .parent-button {
     padding: 9px 13px;
-    border: 1px solid #d6af21;
-    color: #d6af21;
+    border: 1px solid var(--accent-color);
+    color: var(--accent-color);
 }
 
 .hero {
+    position: relative;
     min-height: 680px;
     padding: 150px 0 75px;
     text-align: center;
-    color: white;
-    background-image:linear-gradient(var(--blue-overlay-light), var(--blue-overlay-dark)), url("https://thumb.wikimedia.org/wikipedia/commons/thumb/9/95/Washington_Crossing_the_Delaware_by_Emanuel_Leutze%2C_MMA-NYC%2C_1851.jpg/1280px-Washington_Crossing_the_Delaware_by_Emanuel_Leutze%2C_MMA-NYC%2C_1851.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail");
+    color: var(--white);
+    background-image: linear-gradient(var(--blue-overlay-light), var(--blue-overlay-dark)), url("https://thumb.wikimedia.org/wikipedia/commons/thumb/9/95/Washington_Crossing_the_Delaware_by_Emanuel_Leutze%2C_MMA-NYC%2C_1851.jpg/1280px-Washington_Crossing_the_Delaware_by_Emanuel_Leutze%2C_MMA-NYC%2C_1851.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail");
     background-size: cover;
     background-position: center;
+}
+
+.hero::after {
+    content: "⌄";
+    position: absolute;
+    bottom: 18px;
+    left: 50%;
+    color: var(--white);
+    font-size: 24px;
+    transform: translateX(-50%);
 }
 
 .hero-content {
@@ -86,7 +114,7 @@ body {
 
 .small-heading {
     margin: 0 0 18px;
-    color: #d6af21;
+    color: var(--accent-color);
     font-size: 11px;
     font-weight: bold;
     letter-spacing: 3px;
@@ -100,7 +128,7 @@ body {
 }
 
 .hero h2 span {
-    color: #f2d76a;
+    color: var(--accent-light);
 }
 
 .hero-content > p:not(.small-heading) {
@@ -112,7 +140,7 @@ body {
     display: inline-block;
     padding: 13px 25px;
     border-radius: 25px;
-    background-color: #d6af21;
+    background-color: var(--accent-color);
     color: var(--main-color);
     font-size: 13px;
     font-weight: bold;
@@ -127,13 +155,15 @@ body {
     margin: 60px auto 0;
 }
 
-.hero-cards article {
+.hero-cards a {
+    display: block;
     padding: 25px 15px;
-    border: 1px solid var(--hero-card-border);
-    background-color: rgba(15, 32, 62, 0.849);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border: 1px solid var(--white);
+    background-color: var(--hero-card-background);
+    box-shadow: 0 4px 10px var(--shadow-color);
+    color: var(--white);
+    text-decoration: none;
 }
-
 .hero-cards h3 {
     margin: 0 0 12px;
     font-family: Georgia, "Times New Roman", serif;
@@ -141,14 +171,14 @@ body {
 
 .hero-cards p {
     margin: 0;
-    color: #dddddd;
+    color: var(--light-text);
     font-size: 12px;
 }
 
 .units-section {
     padding: 70px 0;
     background-color: var(--main-color);
-    color: white;
+    color: var(--white);
 }
 
 .units-section h2, .guide-section h2, .quick-links h2, .teacher-section h2 {
@@ -160,7 +190,7 @@ body {
 .section-link {
     float: right;
     margin-top: -55px;
-    color: #d6af21;
+    color: var(--accent-color);
     font-size: 13px;
     text-decoration: none;
 }
@@ -175,40 +205,22 @@ body {
     min-height: 225px;
     overflow: hidden;
     border-radius: 10px;
-    background-color: #0e1d38;
-    color: white;
+    background-color: var(--dark-card);
+    color: var(--white);
 }
 
 .unit-card > p {
     margin: 0 0 20px;
     padding: 26px 10px;
     text-align: center;
+    background-color: var(--accent-color);
+    color: var(--main-color);
     font-size: 11px;
     font-weight: bold;
     letter-spacing: 2px;
 }
 
-.unit-one > p {
-    background-color: #a74300;
-}
-
-.unit-two > p {
-    background-color: #bb0620;
-}
-
-.unit-three > p {
-    background-color: #22449b;
-}
-
-.unit-four > p {
-    background-color: #006a31;
-}
-
-.unit-five > p {
-    background-color: #4c4941;
-}
-
-.unit-card h3, .unit-card span {
+.unit-card h3,.unit-card span {
     display: block;
     margin: 0 15px 15px;
 }
@@ -219,19 +231,23 @@ body {
 }
 
 .unit-card span {
-    color: #b8c0cf;
+    color: var(--light-text);
     font-size: 11px;
     line-height: 1.4;
+}
+
+.unit-card, .hero-cards a, .quick-link-cards a {
+    text-decoration: none;
 }
 
 .guide-section {
     padding: 70px 0;
     text-align: center;
-    background-color: #f7f4ee;
+    background-color: var(--background-color);
 }
 
 .red-heading {
-    color: #b8493d;
+    color: var(--red-color);
 }
 
 .guide-cards {
@@ -242,15 +258,18 @@ body {
 }
 
 .guide-cards article {
+    display: flex;
+    flex-direction: column;
     min-height: 260px;
     padding: 25px 20px;
-    border: 1px solid #ddd8cf;
+    border: 1px solid var(--border-color);
     border-radius: 10px;
-    background-color: white;
+    background-color: var(--white);
 }
 
 .guide-cards .number {
-    color: #d6af21;
+    margin-top: 0;
+    color: var(--accent-color);
     font-size: 12px;
     font-weight: bold;
 }
@@ -261,13 +280,14 @@ body {
 }
 
 .guide-cards article > p:not(.number) {
-    color: #6a7280;
+    color: var(--gray-text);
     font-size: 13px;
     line-height: 1.5;
 }
 
 .guide-cards a, .bottom-link-cards a {
-    color: #a53d34;
+    margin-top: auto;
+    color: var(--red-color);
     font-size: 12px;
     font-weight: bold;
     text-decoration: none;
@@ -275,7 +295,7 @@ body {
 
 .quick-links {
     padding: 40px 0;
-    background-color: #e9e4da;
+    background-color: var(--soft-background);
 }
 
 .quick-links h2 {
@@ -292,7 +312,7 @@ body {
 .quick-link-cards a {
     padding: 17px;
     border-radius: 8px;
-    background-color: white;
+    background-color: var(--white);
     color: var(--main-color);
     font-size: 13px;
     font-weight: bold;
@@ -302,7 +322,7 @@ body {
 .quick-link-cards span {
     display: block;
     margin-top: 4px;
-    color: #968c7e;
+    color: var(--gray-text);
     font-size: 11px;
     font-weight: normal;
 }
@@ -310,7 +330,7 @@ body {
 .teacher-section {
     padding: 70px 0;
     background-color: var(--main-color);
-    color: white;
+    color: var(--white);
 }
 
 .teacher-content {
@@ -326,7 +346,8 @@ body {
     width: 120px;
     height: 120px;
     margin-right: 40px;
-    border: 2px solid #d6af21;
+    border: 2px solid var(--accent-color);
+    color: var(--white);
 }
 
 .teacher-content > div:last-child {
@@ -338,7 +359,7 @@ body {
 }
 
 .teacher-content p:not(.small-heading) {
-    color: #c9ced7;
+    color: var(--light-text);
     font-size: 14px;
     line-height: 1.6;
 }
@@ -347,24 +368,24 @@ body {
     display: inline-block;
     margin-left: 10px;
     padding: 11px 22px;
-    border: 1px solid #91a0bc;
+    border: 1px solid var(--outline-color);
     border-radius: 5px;
-    color: white;
+    color: var(--white);
     font-size: 13px;
     text-decoration: none;
 }
 
 .bottom-links {
     padding: 70px 0;
-    background-color: #f7f4ee;
+    background-color: var(--background-color);
 }
 
 .bottom-link-cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    border: 1px solid #ddd8cf;
+    border: 1px solid var(--border-color);
     border-radius: 10px;
-    background-color: white;
+    background-color: var(--white);
 }
 
 .bottom-link-cards article {
@@ -372,7 +393,7 @@ body {
 }
 
 .bottom-link-cards article:not(:last-child) {
-    border-right: 1px solid #ddd8cf;
+    border-right: 1px solid var(--border-color);
 }
 
 .bottom-link-cards h3 {
@@ -381,22 +402,22 @@ body {
 }
 
 .bottom-link-cards p {
-    color: #6a7280;
+    color: var(--gray-text);
     font-size: 13px;
     line-height: 1.5;
 }
 
 #main-footer {
     padding: 35px;
-    border-top: 3px solid #d6af21;
+    border-top: 3px solid var(--accent-color);
     text-align: center;
     background-color: var(--main-color);
-    color: #bfc6d2;
+    color: var(--footer-text);
 }
 
 #main-footer h2 {
     margin: 0 0 10px;
-    color: #d6af21;
+    color: var(--accent-color);
     font-family: Georgia, "Times New Roman", serif;
 }
 
@@ -406,6 +427,11 @@ body {
 }
 
 @media (max-width: 800px) {
+    #main-header {
+        position: static;
+        background-color: var(--main-color);
+    }
+
     .header-content {
         display: block;
         text-align: center;
@@ -422,6 +448,7 @@ body {
     }
 
     .hero {
+        min-height: 620px;
         padding-top: 100px;
     }
 
@@ -440,15 +467,28 @@ body {
     .quick-link-cards {
         grid-template-columns: repeat(2, 1fr);
     }
-
 }
+
 @media (max-width: 550px) {
+    .hero {
+        min-height: auto;
+        padding: 75px 0 65px;
+    }
+
     .hero h2 {
         font-size: 30px;
     }
 
-    .hero-cards, .unit-cards, .guide-cards, .quick-link-cards, .bottom-link-cards {
+    .hero-cards,
+    .unit-cards,
+    .guide-cards,
+    .quick-link-cards,
+    .bottom-link-cards {
         grid-template-columns: 1fr;
+    }
+
+    .guide-cards article {
+        min-height: 220px;
     }
 
     .teacher-content {
@@ -462,6 +502,6 @@ body {
 
     .bottom-link-cards article:not(:last-child) {
         border-right: 0;
-        border-bottom: 1px solid #ddd8cf;
+        border-bottom: 1px solid var(--border-color);
     }
 }
