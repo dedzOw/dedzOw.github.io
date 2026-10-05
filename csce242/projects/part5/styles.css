@@ -95,6 +95,12 @@ body {
     color: var(--accent-color);
 }
 
+#main-nav .parent-button.active {
+    background-color: var(--accent-color);
+    color: var(--white);
+}
+
+
 .hero {
     position: relative;
     min-height: 680px;
