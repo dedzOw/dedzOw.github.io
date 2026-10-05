@@ -1046,13 +1046,20 @@ body {
         color: var(--white);
     }
 
-    /* Keep the rest of your 800px CSS below this */
+        .hero {
+        padding-top: 65px;
+    }
+
+    .page-banner,
+    .portal-banner {
+        padding: 55px 0 50px;
+    }
 }
 
 @media (max-width: 550px) {
     .hero {
         min-height: auto;
-        padding: 75px 0 65px;
+        padding: 60px 0;
     }
 
     .hero h2,
