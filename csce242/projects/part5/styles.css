@@ -1064,6 +1064,24 @@ body {
     .portal-banner {
         padding: 55px 0 50px;
     }
+
+        .portal-section {
+        padding: 30px 0 50px;
+    }
+
+    .portal-tabs {
+        margin-bottom: 30px;
+    }
+
+    .portal-about {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .teacher-card {
+        max-width: 400px;
+        margin: auto;
+    }
 }
 
 @media (max-width: 550px) {
