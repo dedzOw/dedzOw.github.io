@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Assignment 11</title>
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div id="content">
+            <header id="main-header">
+                <h1>Vacations</h1>
+                <h2>Vacation Experiences</h2>
+            </header>
+
+            <main>
+                <div id="vacation-gallery"></div>
+            </main>
+
+            <footer id="main-footer">
+                <p>&copy;jonnyshank</p>
+            </footer>
+        </div>
+
+        <div id="id01" class="w3-modal">
+            <div class="w3-modal-content">
+                <div class="w3-container">
+                    <span onclick="document.getElementById('id01').style.display='none'"
+                    class="w3-button w3-display-topright">&times;</span>
+
+                    <div class="modal-details">
+                        <iframe id="vacation-map"></iframe>
+
+                        <div id="modal-info">
+                            <h2 id="modal-title"></h2>
+                            <p id="modal-type"></p>
+                            <p id="modal-description"></p>
+                            <p id="modal-things"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="main.js"></script>
+    </body>
+</html>
