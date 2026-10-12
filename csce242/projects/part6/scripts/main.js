@@ -7,3 +7,4 @@ document.getElementById("toggle-nav").onclick = () => {
 setInterval(() => {
     document.getElementById("scroll-arrow").classList.toggle("bounce-arrow");
 }, 500);
+
