@@ -4,35 +4,27 @@
         "title": "iCivics",
         "description": "Games and civic learning",
         "category": "Interactive",
-        "url": "https://www.icivics.org/games",
-        "img_name": "images/icivics.jpg",
-        "img_alt": "iCivics learning resource"
+        "url": "https://www.icivics.org/games"
     },
     {
         "_id": 2,
         "title": "Khan Academy History",
         "description": "U.S. history review",
         "category": "Study",
-        "url": "https://www.khanacademy.org/humanities/us-history",
-        "img_name": "images/khan-academy.jpg",
-        "img_alt": "Khan Academy history resource"
+        "url": "https://www.khanacademy.org/humanities/us-history"
     },
     {
         "_id": 3,
         "title": "Crash Course U.S. History",
         "description": "History videos",
         "category": "Video",
-        "url": "https://thecrashcourse.com/topic/ushistory/",
-        "img_name": "images/crash-course.jpg",
-        "img_alt": "Crash Course history resource"
+        "url": "https://thecrashcourse.com/topic/ushistory/"
     },
     {
         "_id": 4,
         "title": "National Archives",
         "description": "Founding documents",
         "category": "Primary Sources",
-        "url": "https://www.archives.gov/founding-docs",
-        "img_name": "images/national-archives.jpg",
-        "img_alt": "National Archives historical resource"
+        "url": "https://www.archives.gov/founding-docs"
     }
 ]
