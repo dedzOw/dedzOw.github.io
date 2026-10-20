@@ -131,6 +131,21 @@ body {
     text-align: center;
 }
 
+.project-links {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.project-links a:hover {
+    color: #9069b9;
+}
+
+.react-project {
+    margin: 30px auto 0;
+}
 /* 700px or larger */
 @media (min-width: 700px) {
     .card-container {
